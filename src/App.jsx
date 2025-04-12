@@ -1,15 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages";
+import Home from "./pages/Home";
+import Live_Match_Detail from "./components/Live_Match";
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/live_matches" element={<h1>Live Matches</h1>} />
-          <Route path="/upcoming_matches" element={<h1>Contact</h1>} />
-          <Route path="/upcoming_series" element={<h1>Products</h1>} />
+          <Route path="/" index element={<Home/>} />
+          <Route path="/live_match/:id" element={<Live_Match_Detail/>} />
         </Routes>
       </Router>
     </>
