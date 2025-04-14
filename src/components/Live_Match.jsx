@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Spinner } from 'react-bootstrap'
-
+import Keys from '../APIs/API_KEY'
 const Live_Match_Detail = () => {
     const params=useParams()
     const {id}=params
@@ -11,7 +11,7 @@ const Live_Match_Detail = () => {
     const [error, setError] = useState(null)
     const fetchMatch = async () => {
         try {
-            const response = await fetch(`https://api.cricapi.com/v1/currentMatches?apikey=22a3a082-2df1-4345-a554-38c4b30bb170`)
+            const response = await fetch(`https://api.cricapi.com/v1/currentMatches?apikey=${Keys.API_KEY}`)
             if (!response.ok) {
                 throw new Error('Network response was not ok')
             }

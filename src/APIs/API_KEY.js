@@ -1,5 +1,5 @@
 const Keys = {
-  API_KEY: "22a3a082-2df1-4345-a554-38c4b30bb170"
+  API_KEY: "1450956a-6682-4b31-b9c2-90cbe733820d"
 };
 
 export default Keys;
